@@ -6,7 +6,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-2EA44F.svg)](LICENSE)
 [![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/ykmadhav/synthetic-quantum-circuit-reliability-dataset)
 [![Reproducible seed](https://img.shields.io/badge/Seed-42-6f42c1.svg)](REPRODUCIBILITY.md)
-[![CI](https://github.com/Mind-Twister-Wizard/HumanGate-Q/actions/workflows/ci.yml/badge.svg)](https://github.com/Mind-Twister-Wizard/HumanGate-Q/actions/workflows/ci.yml)
 
 HumanGate-Q is the complete implementation and reproducibility package for the
 book chapter **“HumanGate-Q: A Risk-Adaptive Governance Framework for Bounded
