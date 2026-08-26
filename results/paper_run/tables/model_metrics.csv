@@ -1,0 +1,17 @@
+metric,value
+accuracy,0.8955
+balanced_accuracy,0.8765987051079022
+macro_f1,0.8753886861094754
+log_loss,0.24099594130107108
+multiclass_brier,0.14669419519938023
+expected_calibration_error,0.007449496990961081
+temperature,0.9568861994399116
+baseline_accuracy,0.8903333333333333
+absolute_accuracy_gain,0.005166666666666653
+baseline_balanced_accuracy,0.8774411240094523
+absolute_balanced_accuracy_gain,-0.0008424189015501238
+selected_cv_accuracy_mean,0.8899479166666667
+training_rows,19200.0
+calibration_rows,2400.0
+policy_validation_rows,2400.0
+test_rows,6000.0

@@ -1,0 +1,117 @@
+{
+  "joint_scale_0.80": {
+    "exact_action_accuracy": 0.6884,
+    "unsafe_automation_rate": 0.5139225181598063,
+    "unsafe_execution_rate": 0.1857707509881423,
+    "severe_unsafe_execution_rate": 0.0,
+    "appropriate_escalation_recall": 0.795273691825416,
+    "safe_automation_coverage": 0.9413833528722158,
+    "over_escalation_rate": 0.05861664712778429,
+    "automation_rate": 0.3304,
+    "human_review_rate": 0.0818,
+    "abstention_rate": 0.5878,
+    "self_repair_rate": 0.1786,
+    "execute_rate": 0.1518,
+    "unsafe_self_repair_rate": 0.7928331466965286,
+    "severe_unsafe_automation_rate": 0.041767554479418885
+  },
+  "joint_scale_0.90": {
+    "exact_action_accuracy": 0.7306,
+    "unsafe_automation_rate": 0.4423076923076923,
+    "unsafe_execution_rate": 0.12857142857142856,
+    "severe_unsafe_execution_rate": 0.0,
+    "appropriate_escalation_recall": 0.8502531950807812,
+    "safe_automation_coverage": 0.917936694021102,
+    "over_escalation_rate": 0.08206330597889801,
+    "automation_rate": 0.2808,
+    "human_review_rate": 0.1258,
+    "abstention_rate": 0.5934,
+    "self_repair_rate": 0.1548,
+    "execute_rate": 0.126,
+    "unsafe_self_repair_rate": 0.6976744186046512,
+    "severe_unsafe_automation_rate": 0.03133903133903134
+  },
+  "joint_scale_1.10": {
+    "exact_action_accuracy": 0.7534,
+    "unsafe_automation_rate": 0.35844155844155845,
+    "unsafe_execution_rate": 0.08134920634920635,
+    "severe_unsafe_execution_rate": 0.0,
+    "appropriate_escalation_recall": 0.9001687967205209,
+    "safe_automation_coverage": 0.8686987104337632,
+    "over_escalation_rate": 0.13130128956623682,
+    "automation_rate": 0.231,
+    "human_review_rate": 0.1588,
+    "abstention_rate": 0.6102,
+    "self_repair_rate": 0.1302,
+    "execute_rate": 0.1008,
+    "unsafe_self_repair_rate": 0.5729646697388633,
+    "severe_unsafe_automation_rate": 0.009523809523809525
+  },
+  "joint_scale_1.20": {
+    "exact_action_accuracy": 0.7608,
+    "unsafe_automation_rate": 0.296039603960396,
+    "unsafe_execution_rate": 0.06896551724137931,
+    "severe_unsafe_execution_rate": 0.0,
+    "appropriate_escalation_recall": 0.9278996865203761,
+    "safe_automation_coverage": 0.8335287221570926,
+    "over_escalation_rate": 0.16647127784290738,
+    "automation_rate": 0.202,
+    "human_review_rate": 0.173,
+    "abstention_rate": 0.625,
+    "self_repair_rate": 0.1092,
+    "execute_rate": 0.0928,
+    "unsafe_self_repair_rate": 0.489010989010989,
+    "severe_unsafe_automation_rate": 0.005940594059405941
+  },
+  "equal_weight_baseline": {
+    "coefficient": 0.165,
+    "exact_action_accuracy": 0.7342,
+    "unsafe_automation_rate": 0.4142640364188164,
+    "unsafe_execution_rate": 0.07334525939177101,
+    "severe_unsafe_execution_rate": 0.0017889087656529517,
+    "appropriate_escalation_recall": 0.8683385579937304,
+    "safe_automation_coverage": 0.9050410316529894,
+    "over_escalation_rate": 0.09495896834701055,
+    "automation_rate": 0.2636,
+    "human_review_rate": 0.1426,
+    "abstention_rate": 0.5938,
+    "self_repair_rate": 0.1518,
+    "execute_rate": 0.1118,
+    "unsafe_self_repair_rate": 0.6653491436100132,
+    "severe_unsafe_automation_rate": 0.0417298937784522
+  },
+  "random_independent_20_percent": {
+    "seed": 42,
+    "repetitions": 200,
+    "exact_action_accuracy": [
+      0.73519,
+      0.7432,
+      0.75201
+    ],
+    "unsafe_execution_rate": [
+      0.08132373126406911,
+      0.09728767340887429,
+      0.12961671052631576
+    ],
+    "unsafe_automation_rate": [
+      0.3688595145392175,
+      0.39921685240967547,
+      0.4311400852885296
+    ],
+    "appropriate_escalation_recall": [
+      0.8574752833373523,
+      0.8775018085362913,
+      0.895370147094285
+    ],
+    "safe_automation_coverage": [
+      0.8731535756154748,
+      0.8950762016412661,
+      0.9155920281359906
+    ],
+    "human_review_rate": [
+      0.13017,
+      0.1448,
+      0.1576
+    ]
+  }
+}

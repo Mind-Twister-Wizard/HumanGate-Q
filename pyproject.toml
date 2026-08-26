@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "humangate-q"
+version = "2.1.0"
+description = "Risk-adaptive governance for bounded autonomy in quantum agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Alok Raj"},
+  {name = "Anurag Rana"},
+]
+keywords = [
+  "agentic AI",
+  "bounded autonomy",
+  "human-agent collaboration",
+  "quantum computing",
+  "risk-aware AI",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "joblib>=1.3,<2",
+  "kagglehub>=0.3,<1",
+  "lightgbm>=4.3,<5",
+  "matplotlib>=3.7,<4",
+  "numpy>=1.24,<3",
+  "pandas>=2.0,<3",
+  "PyYAML>=6,<7",
+  "scikit-learn>=1.3,<2",
+  "scipy>=1.10,<2",
+  "seaborn>=0.12,<1",
+]
+
+[project.urls]
+Homepage = "https://github.com/Mind-Twister-Wizard/HumanGate-Q"
+Repository = "https://github.com/Mind-Twister-Wizard/HumanGate-Q"
+Issues = "https://github.com/Mind-Twister-Wizard/HumanGate-Q/issues"
+
+[project.scripts]
+humangateq = "humangateq.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+ignore = ["E402"]

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, cite the repository and the accompanying book chapter."
+title: "HumanGate-Q: A Risk-Adaptive Governance Framework for Bounded Autonomy in Quantum Agents"
+type: software
+version: 2.1.0
+date-released: 2026-08-26
+license: MIT
+repository-code: "https://github.com/Mind-Twister-Wizard/HumanGate-Q"
+url: "https://github.com/Mind-Twister-Wizard/HumanGate-Q"
+authors:
+  - given-names: "Alok"
+    family-names: "Raj"
+    orcid: "https://orcid.org/0009-0003-7870-7065"
+    affiliation: "Shoolini University of Biotechnology and Management Sciences"
+  - given-names: "Anurag"
+    family-names: "Rana"
+    orcid: "https://orcid.org/0000-0003-0247-8908"
+    affiliation: "Shoolini University of Biotechnology and Management Sciences"
+keywords:
+  - agentic AI
+  - bounded autonomy
+  - human-agent collaboration
+  - quantum computing
+  - risk-aware governance

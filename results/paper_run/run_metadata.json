@@ -1,0 +1,213 @@
+{
+  "generated_at_utc": "2026-08-20T11:52:20.146153+00:00",
+  "runtime_seconds": 20.838636000000406,
+  "dataset": {
+    "source_path": "data\\raw\\quantum_reliability_dataset.csv",
+    "sha256": "506eff548af0603f771290cb75d3515f203d976162f3171b6494a1bb4d94025c",
+    "rows": 30000,
+    "features": 28,
+    "class_counts": {
+      "LOW": 14999,
+      "HIGH": 7613,
+      "MEDIUM": 7388
+    },
+    "dropped_columns": [
+      "circuit_name",
+      "estimated_fidelity",
+      "hellinger_distance",
+      "reliability_class",
+      "reliability_score",
+      "source_file",
+      "success_probability_ideal",
+      "success_probability_noisy",
+      "total_variation_distance"
+    ],
+    "missing_feature_cells": 0
+  },
+  "configuration": {
+    "project": {
+      "name": "HumanGate-Q",
+      "random_seed": 42
+    },
+    "dataset": {
+      "kaggle_slug": "ykmadhav/synthetic-quantum-circuit-reliability-dataset",
+      "raw_directory": "data/raw",
+      "target_column": "reliability_class",
+      "maximum_rows": 30000,
+      "test_fraction": 0.2,
+      "calibration_fraction_of_training": 0.1,
+      "policy_validation_fraction_of_training": 0.1
+    },
+    "model": {
+      "backend": "lightgbm_search",
+      "selection_metric": "accuracy",
+      "validation_folds": 3,
+      "n_estimators": 160,
+      "max_depth": 20,
+      "min_samples_leaf": 2,
+      "class_weight": "balanced",
+      "n_jobs": -1,
+      "candidates": [
+        {
+          "name": "LGB-S07",
+          "n_estimators": 260,
+          "learning_rate": 0.03,
+          "num_leaves": 7,
+          "min_child_samples": 20,
+          "reg_lambda": 1.0,
+          "colsample_bytree": 1.0,
+          "subsample": 1.0,
+          "subsample_freq": 0
+        },
+        {
+          "name": "LGB-S11",
+          "n_estimators": 180,
+          "learning_rate": 0.05,
+          "num_leaves": 11,
+          "min_child_samples": 20,
+          "reg_lambda": 1.0,
+          "colsample_bytree": 1.0,
+          "subsample": 1.0,
+          "subsample_freq": 0
+        },
+        {
+          "name": "LGB-S15",
+          "n_estimators": 180,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "min_child_samples": 20,
+          "reg_lambda": 1.0,
+          "colsample_bytree": 1.0,
+          "subsample": 1.0,
+          "subsample_freq": 0
+        },
+        {
+          "name": "LGB-S15-C40",
+          "n_estimators": 220,
+          "learning_rate": 0.04,
+          "num_leaves": 15,
+          "min_child_samples": 40,
+          "reg_lambda": 1.0,
+          "colsample_bytree": 1.0,
+          "subsample": 1.0,
+          "subsample_freq": 0
+        },
+        {
+          "name": "LGB-S15-L05",
+          "n_estimators": 220,
+          "learning_rate": 0.04,
+          "num_leaves": 15,
+          "min_child_samples": 20,
+          "reg_lambda": 0.5,
+          "colsample_bytree": 1.0,
+          "subsample": 1.0,
+          "subsample_freq": 0
+        },
+        {
+          "name": "LGB-S31-Bag",
+          "n_estimators": 180,
+          "learning_rate": 0.04,
+          "num_leaves": 31,
+          "min_child_samples": 20,
+          "reg_lambda": 1.0,
+          "colsample_bytree": 0.9,
+          "subsample": 0.9,
+          "subsample_freq": 1
+        }
+      ]
+    },
+    "scenarios": {
+      "maximum_test_cases": 5000,
+      "proportions": {
+        "clean": 0.55,
+        "ambiguous_goal": 0.12,
+        "tool_failure": 0.08,
+        "metadata_missing": 0.1,
+        "distribution_shift": 0.15
+      }
+    },
+    "risk": {
+      "weights": {
+        "reliability": 0.35,
+        "predictive_uncertainty": 0.17,
+        "distribution_shift": 0.13,
+        "verification": 0.16,
+        "resource_complexity": 0.06,
+        "workflow_criticality": 0.13
+      },
+      "interactions": {
+        "reliability_x_criticality": 0.18,
+        "verification_x_criticality": 0.14
+      },
+      "thresholds": {
+        "repair": 0.24,
+        "human_review": 0.46,
+        "abstain": 0.72,
+        "high_stakes_review": 0.34,
+        "high_stakes_criticality": 0.85,
+        "direct_low_probability_abstain": 0.68
+      },
+      "policy_tuning": {
+        "enabled": true,
+        "validation_maximum_cases": 2400,
+        "target_unsafe_execution_rate": 0.12,
+        "minimum_escalation_recall": 0.86,
+        "minimum_safe_automation_coverage": 0.88,
+        "maximum_human_review_rate": 0.3,
+        "grid": {
+          "repair": [
+            0.2,
+            0.24,
+            0.27,
+            0.3,
+            0.33
+          ],
+          "human_review": [
+            0.46,
+            0.48,
+            0.5,
+            0.52
+          ],
+          "abstain": [
+            0.72,
+            0.76,
+            0.8
+          ],
+          "high_stakes_review": [
+            0.34,
+            0.38,
+            0.42
+          ],
+          "direct_low_probability_abstain": [
+            0.68,
+            0.72,
+            0.76
+          ]
+        }
+      }
+    },
+    "evaluation": {
+      "calibration_bins": 10,
+      "bootstrap_repetitions": 300
+    },
+    "output": {
+      "directory": "outputs/latest"
+    }
+  },
+  "environment": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.0",
+    "lightgbm": "4.7.0"
+  },
+  "model_classes": [
+    "HIGH",
+    "LOW",
+    "MEDIUM"
+  ],
+  "model_temperature": 0.9568861994399116,
+  "model_backend": "lightgbm_search",
+  "selected_candidate": "LGB-S15-C40"
+}
