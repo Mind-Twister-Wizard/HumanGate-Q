@@ -11,11 +11,15 @@ authors:
   - given-names: "Alok"
     family-names: "Raj"
     orcid: "https://orcid.org/0009-0003-7870-7065"
-    affiliation: "Shoolini University of Biotechnology and Management Sciences"
+    affiliation: "Yogananda School of AI, Computers and Data Sciences, Shoolini University of Biotechnology and Management Sciences, Solan, Himachal Pradesh, India"
   - given-names: "Anurag"
     family-names: "Rana"
     orcid: "https://orcid.org/0000-0003-0247-8908"
-    affiliation: "Shoolini University of Biotechnology and Management Sciences"
+    affiliation: "Yogananda School of AI, Computers and Data Sciences, Shoolini University of Biotechnology and Management Sciences, Solan, Himachal Pradesh, India"
+  - given-names: "Pankaj"
+    family-names: "Vaidya"
+    orcid: "https://orcid.org/0000-0003-1304-630X"
+    affiliation: "Yogananda School of AI, Computers and Data Sciences, Shoolini University of Biotechnology and Management Sciences, Solan, Himachal Pradesh, India"
 keywords:
   - agentic AI
   - bounded autonomy
