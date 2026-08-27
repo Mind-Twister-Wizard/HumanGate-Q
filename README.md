@@ -171,15 +171,16 @@ GitHub will generate citation formats from [`CITATION.cff`](CITATION.cff).
 Until the chapter receives its final bibliographic details, cite the software
 as:
 
-> Raj, A., and Rana, A. (2026). *HumanGate-Q: A Risk-Adaptive Governance
-> Framework for Bounded Autonomy in Quantum Agents* (Version 2.1.0) [Computer
-> software]. https://github.com/Mind-Twister-Wizard/HumanGate-Q
+> Raj, A., Rana, A., and Vaidya, P. (2026). *HumanGate-Q: A Risk-Adaptive
+> Governance Framework for Bounded Autonomy in Quantum Agents* (Version 2.1.0)
+> [Computer software]. https://github.com/Mind-Twister-Wizard/HumanGate-Q
 
 ## Authors and license
 
-Alok Raj and Anurag Rana, Yogananda School of AI, Computers and Data Sciences,
-Shoolini University of Biotechnology and Management Sciences, India. ORCID and
-affiliation details are in [`AUTHORS.md`](AUTHORS.md).
+Alok Raj, Anurag Rana, and Pankaj Vaidya, Yogananda School of AI, Computers and
+Data Sciences, Shoolini University of Biotechnology and Management Sciences,
+Solan, Himachal Pradesh, India. ORCID and affiliation details are in
+[`AUTHORS.md`](AUTHORS.md).
 
 The software is released under the [MIT License](LICENSE). The Kaggle dataset
 retains its own license and terms.
