@@ -165,15 +165,6 @@ used:
 Read [`docs/DATASET_CARD.md`](docs/DATASET_CARD.md) before reusing the data or
 interpreting the results.
 
-## Use this link in the chapter
-
-After uploading this package, the repository URL is:
-
-**<https://github.com/Mind-Twister-Wizard/HumanGate-Q>**
-
-A concise, paste-ready code-availability statement and release guidance are in
-[`docs/CHAPTER_REPOSITORY_STATEMENT.md`](docs/CHAPTER_REPOSITORY_STATEMENT.md).
-
 ## Citation
 
 GitHub will generate citation formats from [`CITATION.cff`](CITATION.cff).
